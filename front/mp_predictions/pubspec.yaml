@@ -21,12 +21,16 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+  http:
+  flutter_markdown: ^0.6.9+1
 
 flutter:
   uses-material-design: true
   #Add assets:
   assets:
-    - assets/back.png
+    - assets/pred.png
+    - assets/about.jpg
+    - assets/ref.jpg
 
   
   

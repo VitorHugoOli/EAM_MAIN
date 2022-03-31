@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:mp_predictions/src/prediction/prediction.dart';
+import 'package:mp_predictions/src/base.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 
 class MyApp extends StatelessWidget {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => false,
       child: MaterialApp(
-        title: 'eArbo',
+        title: 'Microplastics Predictions',
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
@@ -30,9 +30,9 @@ class MyApp extends StatelessWidget {
         initialRoute: "/",
         navigatorKey: navigatorKey,
         routes: <String, WidgetBuilder>{
-          "/": (BuildContext context) => const Predicition(),
-          // "/about": (BuildContext context) => new RecuperarSenha(),
-          // "/references": (BuildContext context) => new Home(),
+          "/": (BuildContext context) => Base(),
+          "/about": (BuildContext context) => Base(),
+          "/ref": (BuildContext context) => Base(),
         },
       ),
     );
