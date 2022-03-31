@@ -80,7 +80,7 @@ class Prediction extends StatelessWidget {
                     children: [
                       _buildField(
                         'Enter the coordinates:',
-                        'Latitude(0,359)',
+                        'Latitude(-180 , 180)',
                         validator: (value) {
                           if (value != null && value.isEmpty) {
                             return 'Please enter some text';
@@ -92,7 +92,7 @@ class Prediction extends StatelessWidget {
                         },
                       ),
                       const SizedBox(width: 20),
-                      _buildField('', 'Longitude(-37,37)', validator: (value) {
+                      _buildField('', 'Longitude(-37 , 37)', validator: (value) {
                         if (value != null && value.isEmpty) {
                           return 'Please enter a valid longitude';
                         }
