@@ -60,7 +60,7 @@ class BlocPrediction {
 
   Future<void> sendPredictions(PredictionModel e) async {
     final Response response = await http.post(
-      Uri.parse('http://127.0.0.1:5000/prediction'),
+      Uri.parse('http://20.62.163.32:5000/prediction'),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',

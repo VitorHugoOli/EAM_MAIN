@@ -56,20 +56,21 @@ class Prediction extends StatelessWidget {
   }
 
   Widget buildFields() {
-    return SingleChildScrollView(
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              Column(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SingleChildScrollView(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -159,25 +160,32 @@ class Prediction extends StatelessWidget {
                   // ),
                 ],
               ),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState?.validate() ?? false) {
-                    _bloc.sendPredictions(prediction);
-                  }
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xff125c63),
-                ),
-                child: Text(
-                  'Prever',
-                  style: GoogleFonts.poppins(
-                    fontSize: 20,
-                    color: Colors.white,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    if (_formKey.currentState?.validate() ?? false) {
+                      _bloc.sendPredictions(prediction);
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xff125c63),
+                  ),
+                  child: Text(
+                    'Prever',
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
