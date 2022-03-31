@@ -264,7 +264,7 @@ class Prediction extends StatelessWidget {
     }
     if (snapshot.hasData) {
       return Text(
-          "The value predict is: \n" +
+          "The prediction to the concentration of microplastics is: \n" +
               (snapshot.data?.mpMicroplastic?.toStringAsFixed(2) ?? ''),
           textAlign: TextAlign.center,
           style:

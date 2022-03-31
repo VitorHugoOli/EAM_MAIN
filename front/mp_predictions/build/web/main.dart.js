@@ -66022,7 +66022,7 @@ if(r!=null)return A.dB("Ow no! "+A.e(r),s,s,s,A.kM(s,20,B.T),s,s)
 r=a.b
 if(r!=null){r=r.a
 r=r==null?s:B.d.X(r,2)
-return A.dB("The value predict is: \n"+(r==null?"":r),s,s,s,A.kM(s,20,B.T),B.c5,s)}return A.dB("Waiting for data...",s,s,s,A.kM(s,20,B.T),s,s)}}
+return A.dB("The prediction to the concentration of microplastics is: \n"+(r==null?"":r),s,s,s,A.kM(s,20,B.T),B.c5,s)}return A.dB("Waiting for data...",s,s,s,A.kM(s,20,B.T),s,s)}}
 A.a3x.prototype={
 $1(a){if(a.length===0)return"Please enter some text"
 return null},
